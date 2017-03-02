@@ -1,0 +1,108 @@
+$icon-font-path: "assets/styles/mobile/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "assets/styles/mobile/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+//home page
+@import "assets/styles/header.scss";
+@import "assets/styles/home/offline_booking.scss";
+@import "assets/styles/home/banner.scss";
+@import "assets/styles/home/promotion.scss";
+@import "assets/styles/home/recommended_services.scss";
+@import "assets/styles/home/upcoming_events.scss";
+@import "assets/styles/home/recent_booking.scss";
+@import "assets/styles/signin/book_as_guest.scss";
+@import "assets/styles/browser_services/service_group.scss";
+@import "assets/styles/browser_services/service_list.scss";
+@import "assets/styles/navbar_header.scss";
+@import "assets/styles/common.scss";
+@import "assets/styles/browser_services/cart.scss";
+@import "assets/styles/checkout/search_availability.scss";
+@import "assets/styles/checkout/set_time.scss";
+@import "assets/styles/checkout/select_time.scss";
+@import "assets/styles/checkout/therapist_preference.scss";
+@import "assets/styles/checkout/calendar.scss";
+@import "assets/styles/checkout/confirm_details.scss";
+@import "assets/styles/checkout/booking_complete.scss";
+@import "assets/styles/message/congratulation.scss";
+@import "assets/styles/multi_location/location_list.scss";
+@import "assets/styles/signin/forgot_password.scss";
+@import "assets/styles/signin/sign_up.scss";
+@import "assets/styles/browser_services/spa_information.scss";
+@import "assets/styles/my_account/my_profile.scss";
+@import "assets/styles/my_account/upcoming_appointments.scss";
+@import "assets/styles/browser_services/service_description.scss";
+@import "assets/styles/multi_location/location_filter.scss";
+@import "assets/styles/multi_location/location_map.scss";
+@import "assets/styles/settings/settings.scss";
+@import "assets/styles/settings/faq.scss";
+@import "assets/styles/dialogs.scss";
+
+@font-face {
+   font-family: 'HelveticaNeueRegular';
+   src: url('assets/fonts/HelveticaNeueRegular.eot');
+	src: url('assets/fonts/HelveticaNeueRegular.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/HelveticaNeueRegular.woff2') format('woff2'),
+		url('assets/fonts/HelveticaNeueRegular.woff') format('woff'),
+		url('assets/fonts/HelveticaNeueRegular.ttf') format('truetype');
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'HelveticaNeueLight';
+   src: url('assets/fonts/HelveticaNeueLight.eot');
+	src: url('assets/fonts/HelveticaNeueLight.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/HelveticaNeueLight.woff2') format('woff2'),
+		url('assets/fonts/HelveticaNeueLight.woff') format('woff'),
+		url('assets/fonts/HelveticaNeueLight.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'HelveticaNeueMedium';
+   src: url('assets/fonts/HelveticaNeueMedium.eot');
+	src: url('assets/fonts/HelveticaNeueMedium.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/HelveticaNeueMedium.woff2') format('woff2'),
+		url('assets/fonts/HelveticaNeueMedium.woff') format('woff'),
+		url('assets/fonts/HelveticaNeueMedium.ttf') format('truetype');
+}
+
+:root{
+   --main-bg-color: #FFFFFF !important;
+   --sec-bg-color: #F8FBFF !important;
+   --third-bg-color: #EFEFEF !important; //no used
+
+   --main-color: #7D7EA2 !important;
+   --sec-color: #AEAEED;
+   --third-color: #7272F2 !important;
+   --fourth-color: #AEAEEB;
+
+   --color-one: #C8C8C8 !important;
+   --color-two: #72727E !important;
+   --color-three: #46464B !important;
+   --color-four: #C1C1C1 !important;
+   
+   --border-color: #E5E5E5;
+   --border-two: #C4D0D9; //no used
+   --green-bc: #EDF9E9; //no used
+   --border-green: #AFE0A7; //no used
+   --text-color: #86A485;
+   
+   --calendar-bg-color:#F5F5F5;
+   --icon-color:#AFABAB;
+
+   --error-border-color: #f78888;
+   --error-bg-color: #fff7f7;
+   
+   --heading-font-size: 24px !important;
+   --heading-line-height: 30px !important;
+   --heading-two-font-size: 18px !important;
+   --heading-two-line-height: 25px !important;
+   --body-font-size: 14px !important;
+   --body-line-height: 20px !important;
+   --sub-body-font-size: 12px !important;
+   --sub-body-line-height: 15px !important;
+
+   --font-regular: HelveticaNeueRegular;
+   --font-light: HelveticaNeueLight;
+   --font-medium: HelveticaNeueMedium;
+
+}

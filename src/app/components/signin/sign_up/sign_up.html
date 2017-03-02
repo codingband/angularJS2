@@ -1,0 +1,28 @@
+<div class="content_signup ">
+   <div class="container_signup">
+      <h2>
+         Create an Account
+      </h2>
+      <p class="text-center">
+         Create an account today and be able to view and book an appointment anytime.
+      </p>
+      
+      <div class="container_facebook_btn container_facebook_btn_register">
+         <div class="facebook_icon">
+            <img src="assets/images/icon_facebook.png">
+         </div>
+         <button type="button" class="wm_height_btn btn-facebook" (click)="signInFacebook()">
+            Sign up with Facebook 
+         </button>
+      </div>
+      <div class="sign_up_email">
+         <div class="email_icon" (click)="signInEmail('details')">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+         </div>
+         <button type="button" class="wm_button_white wm_height_btn btn-email" 
+                 (click)="signInEmail('email')">
+            Sign up with Email
+         </button>
+      </div>
+   </div>   
+</div>

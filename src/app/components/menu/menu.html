@@ -1,0 +1,57 @@
+<div class="menu-section"  [ngClass]="{'on': isopen==true}">
+   <div class="menu-toggle" [ngClass]="{'on': isopen==true}" (click)="openMenu()">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+   </div>
+   <div class="container_open_menu">
+      <nav class="nav-ct">
+         <ul role="navigation" [ngClass]="{'hidden': isopen==false, 'open_menu': isopen==true}">
+            <li *ngFor="let menu of menu_data; let i = index" (click)="selectedOption(i, menu.code)"
+               [ngClass]="{'active': menu.active==true, 'hidden': menu.display==false}">
+               <img *ngIf="!menu.active" src="{{menu.imgInactive}}" class="col-xs-2" />
+               <img *ngIf="menu.active==true" src="{{menu.imgActive}}" class="col-xs-2" />
+               <h1 class="col-xs-9">{{menu.name}}</h1>
+            </li>
+         </ul>
+      </nav>
+      <div class="container_bottom_menu" *ngIf="signed_out"
+           [ngClass]="{'hidden': isopen==false, 'active': logOutStatus==true}"
+           (click)="logOut()">
+         <img *ngIf="!logOutStatus"
+            src="{{logout_data.imgInactive}}" class="col-xs-2" />
+         <img *ngIf="logOutStatus"
+            src="{{logout_data.imgActive}}" class="col-xs-2" />
+         <h1 class="col-xs-10">{{logout_data.name}}</h1>
+      </div>
+      <div class="container_bottom_menu" *ngIf="only_login"
+           [ngClass]="{'hidden': isopen==false, 'active': logInStatus==true}"
+           (click)="logIn()">
+         <img *ngIf="!logInStatus"
+            src="{{login_data.imgInactive}}" class="col-xs-2" />
+         <img *ngIf="logInStatus"
+            src="{{login_data.imgActive}}" class="col-xs-2" />
+         <h1 class="col-xs-10">{{login_data.name}}</h1>
+      </div>
+      <div class="container_bottom_menu register_login_opt" 
+           *ngIf="signed_in && displayRegister"
+           [ngClass]="{'hidden': isopen==false}">
+         <div [ngClass]="{'active': registerStatus==true}"
+            (click)="registerFunction()" class="col-xs-6 left_section">
+            <img *ngIf="!registerStatus"
+               src="{{register_data.imgActive}}" />
+            <img *ngIf="registerStatus"
+               src="{{register_data.imgActive}}" />
+            <h1 class="remainColor">{{register_data.name}}</h1>
+         </div>
+         <div [ngClass]="{'active': logInStatus==true}"
+            (click)="logIn()" class="col-xs-6">
+            <img *ngIf="!logInStatus"
+               src="{{login_data.imgInactive}}"/>
+            <img *ngIf="logInStatus"
+               src="{{login_data.imgActive}}"/>
+            <h1>{{login_data.name}}</h1>
+         </div>
+      </div>
+   </div>
+</div>

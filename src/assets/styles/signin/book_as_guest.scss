@@ -1,0 +1,237 @@
+.content_sigup{
+   padding-top: 10px;
+}
+.tab_active,.tab_active:hover{
+   background:  var(--main-color);
+   width: 50%;
+}
+.text_active, a.text_active, .text_active a, .text_active a:hover, a.text_active:hover{
+   background: var(--main-color);
+   font-family: HelveticaNeue;
+   font-size: 14px;
+   color: var(--main-bg-color) !important;
+   text-align: center;
+   height: 31px;
+}
+.tab_inactive,.tab_inactive:hover{
+   background: var(--main-bg-color);
+   width: 50%;
+   height: 40px;
+}
+.text_inactive,.text_inactive:hover{
+   background: var(--main-bg-color);
+   font-family: HelveticaNeue;
+   font-size: 14px;
+   color: var(--main-color);
+   text-align: center;
+   height: 31px;
+}
+.content-title .left-arrow-icon{
+   float: left;
+}
+.container_facebook_btn{
+   position: relative;
+   padding-bottom: 17px;
+   border: 0;
+}
+.container_facebook_btn.container_facebook_btn_register{
+   padding-bottom: 0px;
+}
+.btn-facebook {
+   color: var(--main-bg-color) !important;
+   background-color: #3b5998;
+   border-color: rgba(0,0,0,0.2);
+   width: 100%;
+   border: 0px;
+}
+.facebook_icon{
+   position: absolute;
+   background-color: #3b5998;   
+   height: 32px;
+   width: 32px;
+   top: 4px;
+   left: 4px;
+}
+.container-book{
+   margin: 0 auto;
+   width: 88%;
+   padding-top: 20px;
+}
+.container-book p{
+   margin-bottom: 20px;
+}
+.nav-tabs>li>a{
+   line-height: 0.428571 !important;
+}
+.container-book .btn{
+   border-radius: 0px !important;
+   line-height: 1.65857143 !important;
+}
+.content_title{
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+.content_title .glyphicon{
+   top: 3px !important;
+}
+a.btn.btn-default.btn-block.w_button{
+   border: 1px solid #AEAEED;
+   color: #AEAEED;
+   background: var(--main-bg-color);
+}
+.padding-input{
+   padding-bottom: 15px
+}
+.buttom-continue{
+   background: var(--main-color) !important;;
+}
+.imput-form-password{
+   height: 50px;
+   margin-bottom: 15px;
+   width: 100%;
+   background-color: var(--main-bg-color);
+   border: 1px solid var(--color-two);
+   font-family: HelveticaNeue;
+   font-size: 14px;
+   color: var(--color-two);
+   display: inline-block;
+}
+.imput-form-password input {
+   border: none !important;
+   width: 88% !important;
+   height: 46px !important;
+   margin-top: 1px;
+   margin-left: 1px;
+}
+.imput-form-password img {
+   border: none;
+   background: none;
+   width: 7%;
+   margin-top: 0.5px;
+}
+.input-small{
+   width: 48%; 
+   float: left;
+   font-family: HelveticaNeue;
+   font-size: 14px;
+   color: var(--color-two);
+}
+.right-input{
+   float:right;
+}
+/* Would you like to cr: */
+.text_details{
+   font-family: HelveticaNeue;
+   font-size: 14px;
+   color: var(--color-two);
+   line-height: 20px;
+   padding-left: 0 !important;
+   text-align: left !important;
+}
+.check_details{
+   margin-top: 10px;
+   padding-left: 0px !important;
+   padding-right: 0px !important;
+}
+.check_details_left{
+   padding-right: 0px !important;
+}
+.squaredThree{
+   margin-top: 2px;
+}
+.squaredThree input[type=checkbox] + label{
+   width: 20px;
+   height: 20px;
+   display:inline-block;
+   padding: 0 0 0 0px;
+   background: url("assets/images/icon_check_not_clicked.png") no-repeat;
+   background-size: 100%;
+   float: right;
+}
+.squaredThree input[type=checkbox]:checked + label{
+   background: url("assets/images/icon_check_clicked.png") no-repeat;
+   opacity: 1;
+   background-size: 100%;
+   width: 20px;
+   height: 20px;
+   display:inline-block;
+   padding: 0 0 0 0px;
+   float: right;
+}
+.content_button_details{
+   padding-left: 0px!important;
+   padding-right: 0px!important;
+}
+.buttons_margin{
+   margin: 15px auto !important;
+}
+.content_book{
+   padding-bottom: 35px;
+}
+div.scrollable.book_guest_detail_scroll{
+   top: 25% !important;
+}
+i.fa.fa-angle-left.fa_sigin{
+   position: absolute;
+   top: 60px;
+   left: 4%;
+   font-size: 50px;
+}
+img.back_button{
+   position: absolute;
+   top: 76px;
+   left: 7%;
+   width: 15px;
+}
+img.back_button.back_forgot{
+   top: 21px;
+}
+div.content_title.div_signin{
+   padding-top: 0px;
+}
+h2.text-center.book_guest_detail_title,p.text-center.book_guest_detail_subtitle{
+   padding-bottom: 10px;
+}
+.top_or{
+   top: 11px;
+
+}
+.container-book hr{
+   border-top: 1px solid var(--main-color);
+   width: 7%;
+}
+.forgot_password{
+   padding: 20px;
+   text-align: center;
+}
+.main_content_or{
+   width: 70%;
+   margin: 0 auto;
+   padding-bottom: 16px;
+   padding-top: 1px;
+}
+.content_or{
+   padding-left: 24%;
+}
+.content_sigup h1{
+   margin:0px;
+}
+
+.btn_continue{
+   padding-bottom: 50px;
+}
+
+.container-book h2{
+   padding-bottom: 17px!important; 
+}
+span.col-xs-5.text-center.top_or{
+   width: 20%;
+   padding-left: 0;
+   padding-right: 0;
+}
+.register_disabled{
+   border-bottom: 1px solid var(--color-one);
+}
+input.input_email_address{
+   padding: 10px 12px 6px 12px !important;
+}

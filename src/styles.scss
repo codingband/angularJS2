@@ -1,0 +1,223 @@
+/* You can add global styles to this file, and also import other style files */
+//Reset CSS
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+   font-weight: normal;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+body {
+   line-height: 1;
+}
+ol, ul {
+   list-style: none;
+}
+blockquote, q {
+   quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+button{
+   padding: 0;
+   text-align: center;
+   vertical-align: middle;
+   outline: none !important;
+}
+input{
+   padding: 0;
+   vertical-align: middle;
+}
+
+@import "assets/styles/configuration.scss";
+
+html{
+   width: 100%;
+   height: 100%;
+}
+body {
+   padding: 0;
+   width: 100%;
+   height: 100%;
+}
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.navbar-app {
+   min-height: 30px;
+}
+.footer {
+   min-height: 35px;
+   padding-left: 15px;
+   padding-right: 15px;
+}
+.app-content{
+   background: var(--main-bg-color);
+}
+/* Custom page footer */
+.footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:35px;
+   width:100%;
+   border-top: 1px solid var(--color-four);
+   background: var(--main-bg-color);
+}
+.footer h6{
+   color: var(--color-two);
+   text-align: center;
+   font-family: var(--font-light);
+   font-size: var(--sub-body-font-size);
+}
+
+.container-narrow > hr {
+   margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+   text-align: center;
+   border-bottom: 1px solid var(--color-four);
+
+   .btn {
+      font-size: 21px;
+      padding: 14px 24px;
+   }
+}
+
+/* Supporting marketing content */
+.marketing {
+   margin: 40px 0;
+
+   p + h4 {
+      margin-top: 28px;
+   }
+}
+md-sidenav {
+   width: 200px;
+   background: #000;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+   .container {
+      max-width: 730px;
+   }
+
+   /* Remove the padding we set earlier */
+   .header,
+   .marketing,
+   .footer {
+      padding-left: 0;
+      padding-right: 0;
+   }
+   /* Space out the masthead */
+   .header {
+      margin-bottom: 30px;
+   }
+   /* Remove the bottom border on the jumbotron for visual effect */
+   .jumbotron {
+      border-bottom: 0;
+   }
+}
+.app{
+   z-index: 0;
+   padding-top: 59px;
+}
+
+.md-overlay-pane{
+   top: 60px;
+   left: 0 !important;
+   transform: translateX(0%) translateX(0px) translateY(0%) translateY(0px) !important;
+   height: 100%;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.6);
+}
+.md-dialog-container{
+   padding: 0 !important;
+   height: 100%;
+}
+div.add_cart{
+   transform: translateY(0%)!important;
+   padding-top: 10px;
+   padding-bottom: 5px;
+   background: var(--main-bg-color);
+   box-shadow: 0px 4px 5px var(--color-two);
+}
+img.cart_icon{
+   width: 18px;
+   position: absolute;
+   left: 5%;
+}
+div.cart_panel{
+   border-bottom: 1px solid var(--color-two);
+   padding-top: 20px;
+   padding-bottom: 15px;
+   padding-left: 15px;
+   padding-right: 15px;
+}
+div.cart_add_ons{
+   border-bottom: 1px solid var(--color-two);
+   padding-bottom: 15px;
+   padding-left: 15px;
+   padding-right: 15px;
+   padding-top: 13px;
+}
+div.cart_add_ons ul{
+   margin-bottom: 0;
+}
+div.cart_buttons{
+   margin: 10px 30px;
+}
+div.cart_buttons_panel{
+   margin-bottom: 20px;
+   margin-top: 23px;
+}
+div.add_cart_title{
+   border-bottom: 1px solid var(--color-two);
+   padding-bottom: 10px;
+}
+div.cart_panel p{
+   text-align: left !important;
+   margin-top: 10px;
+}
+.cart_add_ons h5{
+   color: var(--color-two);
+   font-family: var(--font-regular) !important;
+   font-weight: 500 !important;
+}
+.cart_add_ons li{
+   color: var(--color-two);
+   font-family: var(--font-regular) !important;
+   font-weight: normal !important;
+}
+button.navbar-default.navbar-toggle button.navbar-toggle.navbar-left.collapsed,.navbar-toggle{
+   border: 0 !important;
+}

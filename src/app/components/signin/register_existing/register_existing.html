@@ -1,0 +1,52 @@
+<div class="content_signup container_register_existing">
+   <div class="content_message messaje_exist_email">
+<!--      *ngIf="showFoundMessage > -1"-->
+
+      <div class="description_message">
+         <p>
+            We found a customer profile which matches your email. Please provide a password to get online access.
+         </p>
+      </div>
+   </div>
+   <div class="container_existing_email content_form">
+      <div class="paddingErrorMessage" *ngIf="displayErrorMessage">
+         <error_dialog (closeErrorMsjEvent)="eventCloseMessage($event)"></error_dialog>
+      </div>
+      <h2>
+         Your Details
+      </h2>
+      <p>
+         Please complete the information below to complete your registration.
+      </p>
+      <form #formExistEmail="ngForm" novalidate 
+         (ngSubmit)="completeSingIn(formExistEmail.value, formExistEmail)">
+         <div class="content_form_register">
+            <div class="padding-input">
+               <input type="text" disabled="disabled"
+                     class="imput-form" placeholder="EMAIL *" name="email" [ngModel]="userExist.email">
+            </div>
+            <div class="padding-input imput-form-password"
+               [ngClass]="{'error_status': (password.dirty && !password.valid) || 
+               (formExistEmail.submitted && !password.valid)}">
+               <input type="{{input_password}}" placeholder="PASSWORD *"
+                  name="password" limit-to="50" required
+                  [ngModel]="userExist.password" #password="ngModel"
+                  validateEqual="confirmPassword" reverse="true">
+               <img src="{{icon_password}}" (click)="showHidePassword()">
+            </div>
+            <div class="padding-input imput-form-password"
+               [ngClass]="{'error_status': (confirmPassword.dirty && !confirmPassword.valid) || 
+               (formExistEmail.submitted && !confirmPassword.valid)}">
+               <input type="{{input_confirm}}"  placeholder="CONFIRM PASSWORD *"
+                  name="confirmPassword" limit-to="50" required
+                  [ngModel]="userExist.confirmPassword" #confirmPassword="ngModel"
+                  validateEqual="password" reverse="false">
+               <img src="{{icon_confirm}}" (click)="showHideConfirm()">
+            </div>
+         </div>
+         <button type="submit" class="wm_button wm_height_btn_form">
+            Complete
+         </button>
+      </form>
+   </div>   
+</div>

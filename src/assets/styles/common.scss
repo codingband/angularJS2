@@ -1,0 +1,200 @@
+.main-content{
+   max-height: 100%;
+}
+h1,h2{
+   font-family: var(--font-medium) !important;
+}
+h3, h4, h5, h6, button, p, a, li{
+   font-family: var(--font-regular) !important;
+   font-weight: 400 !important;
+}
+div, label{
+   font-family: var(--font-regular) !important;
+   color: var(--color-three) !important;
+}
+label{
+   font-weight: 600 !important;
+}
+h1{
+   font-size: var(--heading-font-size) !important;
+   text-align: center;
+   line-height: var(--heading-line-height);
+   color: var(--color-three);
+}
+h2{
+   font-size: var(--heading-two-font-size) !important;
+   text-align: center;
+   line-height: var(--heading-two-line-height);
+   color: var(--color-three) !important;
+   margin-top: 0 !important;
+   margin-bottom: 0 !important;
+}
+p, button, a, li, label, div{
+   font-size: var(--body-font-size) !important;
+   line-height: var(--body-line-height);
+}
+p, button, a{
+   text-align: center;
+}
+p, a{
+   color: var(--color-two) !important;
+}
+h6{
+   font-size: var(--sub-body-font-size)!important;
+   text-align: center; 
+   line-height: var(--sub-body-line-height);
+   color: var(--color-two) !important;  
+}
+button.wm_button, a.wm_button{
+   background: var(--sec-color);
+   width: 100%;
+   border: none;
+   color: var(--main-bg-color);
+   text-align: center;
+   box-shadow: none;
+   text-transform: capitalize;
+}
+h1.wm_subtitle{
+   color: var(--color-two) !important;
+}
+h2.wm_subtitle_left{
+   text-align: left;
+   margin-bottom: 8px !important;
+}
+button.wm_button:active, button.wm_button.active {
+   background: var(--main-bg-color);
+   border: 1px solid var(--sec-color);
+   color: var(--sec-color);
+   box-shadow: none;
+   text-transform: capitalize;
+}
+button.wm_height_btn_form, button.wm_height_btn, a.wm_height_btn{
+   height: 40px;
+   padding-top: 4px;
+   text-transform: capitalize;
+}
+button.wm_button_white{
+   background: var(--main-bg-color);
+   width: 100%;
+   border: 1px solid var(--sec-color);;
+   color: var(--sec-color);
+   text-align: center;
+   box-shadow: none;
+   text-transform: capitalize;
+}
+button.wm_button_white:active, button.wm_button_white.active {
+   background: var(--sec-color);
+   border: none;
+   color: var(--main-bg-color);
+   box-shadow: none;
+   text-transform: capitalize;
+}
+button.wm_button_disbled{
+   background: #ededed;
+   width: 100%;
+   border: 1px solid #cccccc;
+   color: #cccccc;
+   text-align: center;
+   box-shadow: none;
+   text-transform: capitalize;
+}
+button.wm_button_gray{
+   background: var(--main-bg-color);
+   width: 100%;
+   border: 1px solid var(--main-color);;
+   color: var(--main-color);
+   text-align: center;
+   box-shadow: none;
+   text-transform: capitalize;
+}
+button.wm_button_gray:active, button.wm_button_gray.active {
+   background: var(--main-color);
+   border: none;
+   color: var(--main-bg-color) !important;
+   box-shadow: none;
+   text-transform: capitalize;
+}
+button, input, a{
+   outline: none;
+}
+.glyphicon {
+   pointer-events: all;
+}
+img{
+   width: 100%;
+}
+.nav-tabs{
+   border-bottom: none !important;
+   padding-top: 1px;
+}
+.nav-tabs>li{
+   border-top: 1px solid var(--main-color);
+   border-bottom: 1px solid var(--main-color);
+   height: 42px;
+   margin-bottom: 0 !important;
+}
+.nav-tabs>li:hover{
+   border: none;
+}
+.nav-tabs>li>a:hover{
+   border: none;
+}
+.nav-tabs>li>a{
+   border: none !important;
+   padding-top: 11px !important;
+   line-height: 1.5 !important;
+   padding-bottom: 6px !important;
+   border-radius: 0 !important;
+}
+.nav-tabs li.middle_tab{
+   border-left: 1px solid var(--main-color);
+   border-right: 1px solid var(--main-color) !important;
+}
+.nav-tabs li.tab_inactive a, .nav-tabs li.tab_inactive a:hover{
+   color: var(--main-color) !important;
+   background: var(--main-bg-color);
+}
+.nav-tabs li.tab_active a, .nav-tabs li.tab_active a:hover{
+   color: #eeeefb !important;
+   background: var(--main-color);
+   border: 0px!important;
+}
+.nav-tabs > li > a:hover{
+   border: none !important;
+}
+input[type=email], input[type=number], input[type=password], input[type=search], 
+input[type=tel], input[type=text], input[type=url], textarea{
+   width: 100%;
+   height: 50px;
+   border: 1px solid var(--color-two);
+   font-family: var(--font-regular) !important;
+   font-size: var(--body-font-size);
+   color: var(--color-two);
+   font: caption;
+   padding: 12px 12px 6px 12px;
+   //line-height: normal;
+}
+::-webkit-input-placeholder {
+   padding-top: 3px;
+}
+:-moz-placeholder { /* Firefox 18- */
+   padding-top: 3px;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   padding-top: 3px;
+}
+:-ms-input-placeholder {  
+   padding-top: 3px;
+}
+sub, sup {
+   font-size: 53% !important;
+   left: 2px;
+   top: -5px !important;
+}
+.row{
+   margin-left: 0 !important;
+   margin-right: 0 !important;
+}
+.transform_capitalize{
+   text-transform: capitalize;
+}  

@@ -1,0 +1,21 @@
+@media only screen
+and (orientation: landscape){
+    .header-navbar .navbar-brand>img{
+        width: 10%;
+    }
+}
+@media only screen
+and (orientation: portrait){
+    .header-navbar .navbar-brand>img{
+        width: 15%;
+    }
+}
+.header-navbar .navbar-app{
+    background: #ffffff;
+}
+.header-navbar .navbar-brand>img{
+    margin: auto;
+}
+.header-navbar .pull-left img, .header-navbar .pull-right img{
+    width: 30%;
+}

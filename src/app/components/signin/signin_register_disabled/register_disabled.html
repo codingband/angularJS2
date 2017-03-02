@@ -1,0 +1,41 @@
+<div class="content_title div_signin register_disabled">
+   <h1>
+      <img src="assets/images/icon_left_arrow.png" class="back_button"/>
+      {{currentTitle}}
+   </h1>
+</div> 
+<div class="container-book">
+   <div>
+      <div class="container_facebook_btn">
+         <div class="facebook_icon">
+            <img src="assets/images/icon_facebook.png">
+         </div>
+         <button type="button" class="wm_height_btn btn-facebook">
+            Sign In with Facebook 
+         </button>
+      </div>
+
+      <div class="main_content_or">
+         <div class="content_or row">
+            <hr class="col-xs-6">
+            <span class="col-xs-5 text-center top_or">or</span> 
+            <hr class="col-xs-6">
+         </div> 
+      </div>
+   </div>   
+   <div class="content_form">
+      <div class="padding-input">
+         <input type="text"  placeholder="EMAIL ADDRESS *" maxlength="50">
+      </div>
+      <div class="padding-input imput-form-password">
+         <input type="{{input_password}}" placeholder="PASSWORD *">
+         <img src="{{icon_password}}" (click)="showHidePassword()">
+      </div>
+      <button type="button" class="wm_button wm_height_btn_form" (click)="signIn()">
+         Sign In
+      </button>
+      <div class="forgot_password">
+         <a href="/forgot_password" (click)="forgotPassword()">Forgot Password?</a>
+      </div>
+   </div>
+</div>

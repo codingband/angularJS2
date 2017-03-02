@@ -1,0 +1,33 @@
+<div>
+   <div class="content_title div_signin">
+      <h1>
+         <img src="assets/images/icon_left_arrow.png" class="back_button"
+            (click)="backToView()" >
+         Register
+      </h1>
+   </div> 
+   <div class="tabs_wm main_content_service_group">
+      <ul class="nav nav-tabs service_tabs">
+         <li [ngClass]="{'tab_active': activeTab == 1,'tab_inactive': activeTab == 2}" (click)="selectTab(1)" >
+            <a>Returning Guest</a>
+         </li>
+         <li [ngClass]="{'tab_active': activeTab == 2,'tab_inactive': activeTab == 1}" (click)="selectTab(2)">
+            <a>New Guest</a>
+         </li>
+      </ul>
+      <div *ngIf="activeTab == 1">
+       <returning_guest></returning_guest>
+      </div>
+      <div *ngIf="activeTab == 2">
+         <div *ngIf="showSignUp==true">
+            <sign_up (openSignIn)="signInOption($event)"></sign_up>
+         </div>
+         <div *ngIf="showRegister==true">
+            <register_existing></register_existing>
+         </div>
+         <div *ngIf="showRegisterDetails==true">
+            <register_details (openExistEmail)="openExistEmailForm($event)"></register_details>
+         </div>
+      </div>
+   </div>
+</div>

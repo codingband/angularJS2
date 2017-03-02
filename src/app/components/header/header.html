@@ -1,0 +1,13 @@
+<div>
+   <div class="col-xs-4 container_menu_icon">
+      <menu></menu>
+   </div>
+   <div class="col-xs-3 content_logo" (click)="goHome()">
+      <img src="assets/images/icon_logo.png"/>
+   </div>
+   <div class="col-xs-4 content_cart_button">
+      <button type="button" (click)="goCart()">
+         <img class="image_cart" src="{{getCart()}}"/>
+      </button>
+   </div>
+</div>

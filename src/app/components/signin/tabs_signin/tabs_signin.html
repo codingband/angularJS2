@@ -1,0 +1,41 @@
+<div>
+   <div class="content_title div_signin" [ngClass]="{'register_disabled': !displayRegister}">
+      <h1>
+         <img src="assets/images/icon_left_arrow.png" class="back_button"
+            (click)="backToView()" >
+         {{currentTitle}}
+      </h1>
+   </div> 
+   <div class="main_content_service_group">
+      <ul class="nav nav-tabs service_tabs" *ngIf="displayRegister">
+         <li [ngClass]="{'tab_active': activeTab == 1,'tab_inactive': activeTab == 2}"
+            (click)="selectTab(1)">
+            <a>
+               Returning Guest
+            </a>
+         </li>
+         <li [ngClass]="{'tab_active': activeTab == 2,'tab_inactive': activeTab == 1}"
+            (click)="selectTab(2)">
+            <a>
+               New Guest
+            </a>
+         </li>
+      </ul>
+      <div *ngIf="activeTab==1">
+         <!--div *ngIf="!showRegister"-->
+         <returning_guest></returning_guest>
+         <!--/div-->
+      </div>
+      <div *ngIf="activeTab==2">
+         <div *ngIf="showNewGuestForm">
+            <register_details (openExistEmail)="openExistEmailForm($event)"></register_details>
+         </div>
+         <div *ngIf="!showNewGuestForm">
+            <register_existing></register_existing>
+         </div>
+         <!--div *ngIf="showBookGuestDetail">
+            <book_guest_detail></book_guest_detail>
+         </div-->
+      </div>
+   </div>
+</div>

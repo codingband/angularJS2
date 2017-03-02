@@ -1,0 +1,46 @@
+<div *ngIf="displayHome">
+  <div class="header_main_content" id="header_spa" [hidden]="isHidden()">
+    <header_menu></header_menu>
+  </div>
+  <div class="app" [ngClass]="{'app_open_menu': isopenMenu==true}">
+    
+    <!-- App Body -->
+    <div class="app-body" #root="$implicit" dir="ltr">
+        <div class="app-content">
+          <!-- App Body <offline_booking></offline_booking>-->
+
+          <router-outlet></router-outlet>
+        </div>
+    </div>  
+    <div class="footer" id="footer_spa">
+        <h6>
+          &#169; {{year}} Book4Time
+        </h6>
+    </div>
+  </div><!-- ~ .app -->
+</div>
+<div class="offline_content" *ngIf="!displayHome">
+   <div class="offline_image">
+      <img src="./assets/images/home/icon_offline.png" />
+   </div>
+   <h1 class="offline_title">Sorry for the inconvenience!</h1>
+   <p class="offline_messaje">
+      Looks like we're not available for online booking at the moment.
+   </p>
+<!-- <div class="content_button">
+        <button type="button" class="wm_button wm_height_btn" 
+                (click)="backWebSite()">
+                Return to Website
+        </button>
+      </div> -->
+   <div class="return_button" *ngIf="websiteSpa != ''">
+      <a href="{{websiteSpa}}" class="wm_button wm_height_btn" >
+            Return to Website
+      </a>
+   </div>
+   <div class="content_button disabledButton" *ngIf="websiteSpa == ''">
+      <button type="button" class="wm_height_btn wm_button_disbled" disabled>
+         Return to Website
+      </button>
+   </div>
+</div>

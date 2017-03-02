@@ -1,0 +1,17 @@
+<div class="container-book">  
+   <div class="content_form">
+      <div class="padding-input">
+         <input type="text"  placeholder="EMAIL ADDRESS *" maxlength="50">
+      </div>
+      <div class="padding-input imput-form-password">
+         <input type="{{input_password}}" placeholder="PASSWORD *">
+         <img src="{{icon_password}}" (click)="showHidePassword()">
+      </div>
+      <button type="button" class="wm_button wm_height_btn_form"  (click)="signIn()">
+         Sign In
+      </button>
+      <div class="forgot_password">
+         <a href="/forgot_password" (click)="forgotPassword()">Forgot Password?</a>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,111 @@
+<div class="content_signup ">
+   <div class="container_existing_email">
+      <div class="paddingErrorMessage" *ngIf="displayErrorMessage">
+         <error_dialog (closeErrorMsjEvent)="eventCloseMessage($event)"></error_dialog>
+      </div>
+      <h2>
+         Your Details
+      </h2>
+      <p>
+         Please complete the information below to complete your registration.
+      </p>
+      <form #formRegisterDetails="ngForm" novalidate 
+         (ngSubmit)="completeRegister(formRegisterDetails.value, formRegisterDetails)">
+         <div class="content_form_register content_form">
+            <div class="input-small padding-input">
+               <input type="text" class="imput-form" placeholder="FIRST NAME *"
+                  name="firstname" limit-to="50" required
+                  [ngModel]="user.firstname" #firstname="ngModel" 
+                  [ngClass]="{'error_status': (firstname.dirty && firstname.errors?.required) ||
+                  (firstname.pristine && formRegisterDetails.submitted)}">
+            </div>
+
+            <div class="input-small padding-input right-input">
+               <input type="text" placeholder="LAST NAME *"
+                  name="lastname" limit-to="50" required
+                  [ngModel]="user.lastname" #lastname="ngModel" 
+                  [ngClass]="{'error_status': (lastname.dirty && lastname.errors?.required) ||
+                  (lastname.pristine && formRegisterDetails.submitted)}">
+            </div>
+            
+            <div class="padding-input">
+               <input type="email" class="imput-form" placeholder="EMAIL *"
+                  name="email" [ngModel]="user.email" limit-to="50"
+                  required  #email="ngModel" (keyup)="updateEmail(email)"
+                  (blur)="updateEmail(email)"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                  [ngClass]="{'error_status': (email.dirty && !email.valid) ||
+                  (formRegisterDetails.submitted && !email.valid)}">
+            </div>
+            
+            <div class="padding-input">
+               <input type="tel" class="imput-form" placeholder="PHONE *"
+                  name="phone" limit-to="50" required
+                  [ngModel]="user.phone" #phone="ngModel"
+                  [disabled]="showPasswordContent && !enableFields"
+                  [ngClass]="{'error_status': (phone.dirty && phone.errors?.required && !(showPasswordContent && !enableFields)) ||
+                  (phone.pristine && formRegisterDetails.submitted && !(showPasswordContent && !enableFields))}">
+            </div>
+
+            <div class="col-xs-12 check_details" *ngIf="showAccountCheckbox">
+               <p class="col-xs-9 text_details">Would you like to create an account with us? </p> 
+               <div class="col-xs-3 check_details_left">
+                  <section title=".squaredThree">
+                     <div class="squaredThree">
+                           <input type="checkbox" value="None" id="squaredThree" name="check" 
+                           [(ngModel)]="checked" (ngModelChange)="displayPasswordContent()" checked />
+                           <label for="squaredThree"></label>
+                     </div>
+                  </section>
+               </div>
+            </div>
+
+            <div *ngIf="showPasswordContent && !enableFields">
+               <div class="padding-input imput-form-password">
+                  <input type="{{input_password}}" placeholder="PASSWORD *"
+                     name="password" limit-to="50" required
+                     [ngModel]="user.password" #password="ngModel"
+                     [disabled]="true"
+                     validateEqual="confirmPassword" reverse="true" >
+                  <img src="{{icon_password}}" (click)="showHidePassword()">
+               </div>
+
+               <div class="padding-input imput-form-password">
+                  <input type="{{input_confirm}}"  placeholder="CONFIRM PASSWORD *"
+                     name="confirmPassword" limit-to="50" required
+                     [ngModel]="user.confirmPassword" #confirmPassword="ngModel"
+                     [disabled]="true"
+                     validateEqual="password" reverse="false">
+                  <img src="{{icon_confirm}}" (click)="showHideConfirm()">
+               </div>
+            </div>
+             <div *ngIf="showPasswordContent && enableFields">
+               <div class="padding-input imput-form-password"
+                  [ngClass]="{'error_status': (password.dirty && !password.valid) || 
+                  (formRegisterDetails.submitted && !password.valid)}">
+                  <input type="{{input_password}}" placeholder="PASSWORD *"
+                     name="password" limit-to="50" required
+                     [ngModel]="user.password" #password="ngModel"
+                     validateEqual="confirmPassword" reverse="true" >
+                  <img src="{{icon_password}}" (click)="showHidePassword()">
+               </div>
+               <div class="padding-input imput-form-password"
+                  [ngClass]="{'error_status': (confirmPassword.dirty && !confirmPassword.valid) || 
+                  (formRegisterDetails.submitted && !confirmPassword.valid)}">
+                  <input type="{{input_confirm}}"  placeholder="CONFIRM PASSWORD *"
+                     name="confirmPassword" limit-to="50" required
+                     [ngModel]="user.confirmPassword" #confirmPassword="ngModel"
+                     validateEqual="password" reverse="false">
+                  <img src="{{icon_confirm}}" (click)="showHideConfirm()">
+               </div>
+            </div>
+            
+         </div>
+         <button type="submit" class="wm_button wm_height_btn_form">
+            Complete
+         </button>
+      </form>
+      
+      
+   </div>   
+</div>

@@ -1,0 +1,53 @@
+.container_signup{
+   margin-top: 28px;
+}
+.sign_up_email{
+   position: relative;
+   margin-top: 20px;
+}
+.email_icon{
+   position: absolute;
+   border: 1px solid var(--main-color);
+   height: 32px;
+   width: 32px;
+   top: 4px;
+   left: 4px;
+}
+.email_icon .fa-envelope-o{
+   font-size: 20px;
+   width: 100%;
+   color: var(--main-color) !important;
+   text-align: center;
+   padding-top: 15%;
+}
+.sign_up_email button{
+   color: var(--main-color) !important;
+   border-color: var(--main-color) !important;
+}
+.content_signup{
+   padding-bottom: 25px;
+}
+.content_signup p{
+   margin-top: 15px;
+   margin-bottom: 20px;
+}
+.check_details p.text_details{
+   margin-top: 0;
+}
+.name_button{
+   vertical-align: middle;
+}
+.container_existing_email{
+   width: 88%;
+   margin: 7% auto;
+}
+.content_message{
+   margin-top: 20px;
+}
+.content_message p{
+   margin: 15px 20px !important;
+   color: var(--text-color) !important;
+}
+.messaje_exist_email{
+   height: 88px;
+}

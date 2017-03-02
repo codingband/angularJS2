@@ -1,0 +1,114 @@
+@media only screen and
+(max-width:360px){
+   .container_edit_details .title_edit h1{
+      width: 84%;
+   }
+}
+.tabs_myaccount{
+   background: var(--sec-bg-color);
+}
+.container_my_profile{
+   padding-bottom: 33px;
+}
+.container_my_profile .title_profile{
+   padding-bottom: 10px;
+}
+.container_my_details{
+   background: var(--main-bg-color);
+}
+.container_my_profile .container_my_details .sub_title{
+   height: 40px;
+   width: 100%;
+   background: var(--main-color);
+}
+.container_my_profile .container_my_details .sub_title label{
+   width: 100%;
+   text-align: center;
+   color: var(--main-bg-color) !important;
+   padding-top: 11px;
+}
+.container_my_profile label{
+   font-weight: 500 !important;
+}
+.container_my_details .details{
+   padding-top: 12px;
+}
+.container_my_details .details .row{
+   border-bottom: 1px solid var(--border-two);
+   padding: 16px 20px;
+}
+.container_my_details .details .row label{
+   margin-bottom: 0;
+}
+.container_my_details .sub_title{
+   position: relative;
+}
+.container_my_details .sub_title .edit_icon{
+   position: absolute;
+   width: 4.5%;
+   top: 12px;
+   right: 40px;
+}
+.container_password input{
+   border: none;
+   background: white;
+   height: 10px;
+   padding-left: 0px !important;
+}
+.my_account_dialog .md-overlay-container .md-overlay-pane{
+   top: 0 !important;
+   z-index: 1;
+}
+/*Edit details*/
+.my_account_dialog .md-overlay-container .md-overlay-pane .md-dialog-container
+focus-trap > div:nth-child(2){
+   height: 100%;
+}
+.container_edit_details{
+   height: 100%;
+   width: 100%;
+   background: var(--main-bg-color);
+   position: relative;
+}
+.container_edit_details .title_edit{
+   border-bottom: 1px solid var(--border-color);
+   height: 69px;
+}
+.container_edit_details .title_edit img{
+   width: 52px;
+   padding: 27px 17px;
+}
+.container_edit_details .title_edit h1{
+   margin: 0;
+   padding: 27px;
+   padding-left: 5px;
+   padding-right: 12px;
+}
+.main_container_form{
+   width: 88%;
+   margin: 0 auto;
+}
+.main_container_form{
+   width: 88%;
+   margin: 0 auto;
+   margin-right: 27px;
+}
+.main_container_form h1{
+   text-align: left;
+}
+.container_edit_details .sub_title_edit .divider_line_promo{
+   margin-left: 0;
+   margin-bottom: 17px;
+   width: 18%;
+}
+.container_edit_details .container_button{
+   border-top: 1px solid var(--border-color);
+   height: 100px;
+   bottom: 0;
+   position: absolute;
+   width: 100%;
+}
+.container_edit_details .container_button div{
+   width: 88%;
+   margin: 30px auto;
+}

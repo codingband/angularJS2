@@ -1,0 +1,110 @@
+.content_appointments{
+   background: var(--sec-bg-color);
+   padding-bottom: 50px
+}
+.content_appointments h1{
+   margin-top:0px;
+   margin-bottom:0px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+.content_appointments .nav-tabs>li {
+   width: 50%;
+   height: 50px;
+}
+
+.content_appointments  .nav-tabs {
+   background: var(--main-bg-color);
+   border-bottom: 1px solid var(--border-color)!important;
+   border-top: 1px solid var(--border-color)!important;
+}
+.content_appointments .tab_active, .content_appointments .tab_inactive:hover {
+   border-bottom: 1px solid var(--main-color) !important;
+   border-right: 1px solid var(--main-bg-color);
+}
+img.icon_confirm_details{
+   width: 88%;
+}
+.details_appointments_hour{
+   font-family: var(--font-medium) !important;
+   font-weight: 600 !important;
+   margin-bottom: 3px;
+}
+.details_appointments_price{
+   padding-top: 0px !important;
+   margin-bottom: 10px;
+}
+.content_appointments .tab_active, .content_appointments .tab_active:hover {
+   background: var(--main-bg-color);
+   width: 50%;
+   border-bottom: 5px solid var(--main-color)!important;
+   border-top: 1px solid var(--main-color)!important;
+   border-right: 1px solid var(--main-bg-color);
+}
+.content_appointments .nav-tabs li.tab_active a,.content_appointments .nav-tabs li.tab_inactive a,
+.content_appointments .nav-tabs li.tab_active a:hover{
+   color: var(--main-color) !important; 
+   background: var(--main-bg-color);
+   padding-top: 15px !important;
+}
+.content_box_appointments{
+   width: 88%;
+   margin: 5% auto;
+   background: var(--main-bg-color);
+   border: 1px solid var(--border-color);
+   box-shadow: 0px 4px 5px var(--color-two);
+   margin-top: 5px;
+}
+.title_appointments{
+   padding-top: 20px;
+   width: 88%;
+   margin: 0 auto;
+   position: relative;
+   font-family: var(--font-regular) !important;
+   font-weight: normal !important;
+}
+.title_appointments.cancel_appointment,.content_box_appointments.cancel_appointment{
+   width: 100%;
+}
+.title_appointments h2{
+   padding-left: 5px;
+}
+.body_appointments{
+   padding-top: 10px;
+}
+h2.row_appointments.text-left,.title_appointments h2,
+.sub_title_edit.cancel_app_title h1{
+   font-family: var(--font-regular) !important;
+   font-weight: normal !important;
+   margin-bottom: 5px;
+}
+.row.details_appointments{
+   border-top: 1px solid var(--border-color);
+}
+h2.row_appointments.text-left{
+   padding-top: 10px;
+   font-size: 17px !important;
+}
+.title_appointments .icon_trash{
+   position: absolute;
+   right: 5px;
+   top: 20px;
+   font-size: 18px;
+}
+.row_appointments{
+   margin-bottom: 5px !important;
+   margin-top: 5px !important;
+   padding-left: 0px !important;
+}
+.description_addons{
+   border-top: solid 1px var(--color-one);
+}
+.time_appointments{
+   background: var(--sec-color);
+   height: 119px;
+}
+.time_appointments p{
+   color: var(--main-bg-color)!important;
+   padding-top: 40px;
+}

@@ -1,0 +1,39 @@
+<div class="promotions_content promo" *ngIf="promotions.length > 0">
+   <div class="content_title">
+      <div class="content_title_icons">
+         <img class="col-md-4 bell_icon" src="assets/images/promotion/icon_promotions.png" /> 
+      </div>
+      <h2>Promotions</h2>
+   </div>
+   <div class="promotion" *ngFor="let promotion of promotions">
+        <div class="img_promotion" *ngIf="promotion.imageURL">
+         <img class="image_promotions" src="{{promotion.imageURL}}" />
+      </div>
+      <div class="description_promotion">
+         <h2>{{promotion.title}}</h2>
+         <p>
+            {{promotion.description}}
+         </p>
+      </div>
+      <!--<div>
+         <button type="button" class="wm_button wm_height_btn" (click)="bookNow(promotion)">
+            Book Now
+         </button>
+      </div> -->
+   </div>
+
+   <div class="register_message">
+      <div class="sub-content-register_message"></div>
+      <h2 class="wm_subtitle_left">Love our promotions?</h2>
+      <div class="divider_line_promo"></div>
+      <p class="description_love_promo">
+         Sign up with us and be informed about our latest offers.
+      </p>
+      <div>
+         <button type="button" class="wm_button_white wm_height_btn" (click)=goRegister()>
+            Register
+            <i class="right-arrow-icon glyphicon glyphicon-menu-right"></i>
+         </button>
+      </div>
+   </div>
+</div>

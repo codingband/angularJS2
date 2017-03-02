@@ -1,0 +1,67 @@
+<div class="upcoming_content recent_booking_content">
+   <div class="content_title">
+      <div class="content_title_icons">
+         <img class="col-md-4 bell_icon" src="assets/images/home/recent_booking_icon.png" />
+      </div>
+      <h2>Recent Booking</h2>
+      <p>{{user_name}}, these are your recent booking.</p>
+   </div>
+   <div class="horisontal_slide_recent_booking">
+      <div class="main_horisontal_recent_booking" id="container_padding">
+           <ks-swiper-container [options]="recentBookingSwipeOptions">
+            <ks-swiper-slide *ngFor="let booking of recent_booking_inf">
+               <div class="main_recent_booking">
+                  <div class="recent_booking">
+                     <div class="header_upcomming">
+                        <h2 class="date wm_subtitle_left">{{booking.date | date:'d MMMM'}}</h2>
+                     </div>
+                     <div class="divider_line_promo"></div>
+                     <div class="upcoming_place">
+                        <h6 class="location">{{booking.locationName}}</h6>
+                        <h6 class="confirmation">#{{booking.appointmentTypeCode}}</h6>
+                     </div>
+                  </div>
+                  <div class="upcoming">
+                     <div class="main_upcoming_content_inf">
+                        <div class="content_upcoming_info">
+                           <div class="slide_content"
+                              [ngClass]="{'big_container': booking.lines.length > 1}">
+                              <div class="sub_content_slide" 
+                                 *ngFor="let appointment of booking.lines">
+                                 <div class="upcoming_info row">
+                                    <div class="time col-xs-2">
+                                       {{getTime(appointment.customerStartTime)}}
+                                    </div>
+                                    <div class="message_icon col-xs-9">
+                                       <div class="icon_message col-xs-2">
+                                          <img src="assets/images/home/upcoming.png" />
+                                       </div>
+                                       <div class="message col-xs-10 message_border">
+                                          {{appointment.serviceName}}
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="sub_content_slide empty_content_slide"
+                                 *ngIf="booking.lines.length > 1">
+                                 <div class="upcoming_info row">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="opacity_element empty_content_slide"
+                              *ngIf="booking.lines.length > 1"></div>
+                        </div>
+                     </div>
+                     <div>
+                        <button type="button" class="wm_button wm_height_btn"
+                                (click)="bookAgain()">
+                           Book Again
+                        </button>
+                     </div>
+                  </div>
+               </div> 
+            </ks-swiper-slide>
+         </ks-swiper-container>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="content_sigup">
+   <div class="scrollable book_guest_detail_scroll">
+      <div class=" scrollable-content tabs_wm main_content_service_group"> 
+         <div class="container-book">
+            <h2 class="text-center book_guest_detail_title">
+               Your Details
+            </h2>
+            <p class="text-center">
+               Please complete the information below to continue you booking
+            </p>
+            <div class="input-small padding-input">
+               <input type="text" class="imput-form" placeholder="FIRST NAME*">
+            </div>
+            <div class="input-small padding-input right-input">
+               <input type="text" placeholder="LAST NAME*">
+            </div>
+            <div class="padding-input">
+               <input type="text"  placeholder="EMAIL*">
+            </div>
+            <div class="padding-input">
+               <input type="text"  placeholder="PHONE*">
+            </div>
+            <div class="col-xs-12 check_details">
+               <p class="col-xs-9 text_details">Would you like to create an account with us? </p> 
+               <div class="col-xs-3 check_details_left">
+                  <section title=".squaredThree">
+                     <!-- .squaredThree -->
+                     <div class="squaredThree">
+                           <input type="checkbox" value="None" id="squaredThree" name="check" checked />
+                           <label for="squaredThree"></label>
+                     </div>
+                     <!-- end .squaredThree -->
+                  </section>
+               </div>
+            </div>
+            <div class="padding-input imput-form-password">
+               <input type="{{input_password}}" placeholder="PASSWORD*">
+               <img src="{{icon_password}}" (click)="showHidePassword()">
+
+            </div>
+            <div class="padding-input imput-form-password">
+               <input type="{{input_confirm}}" placeholder="CONFIRM PASSWORD*">
+               <img src="{{icon_confirm}}" (click)="showHideConfirm()">
+            </div>            
+            <div class="col-xs-12 btn_continue content_button_details">
+               <button class="wm_button wm_height_btn_form" (click)="continueDetails()">
+                  Continue
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

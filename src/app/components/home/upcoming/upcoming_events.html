@@ -1,0 +1,61 @@
+<div class="upcoming_content upcoming_container" *ngIf="upcoming_inf.length > 0">
+   <div class="content_title">
+      <div class="content_title_icons">
+         <img class="col-md-4 bell_icon" src="assets/images/home/icon_upcoming.png" />
+      </div>
+      <h2 class="wm_subtitle">Upcoming Appointments</h2>
+      <p>{{user_name}}, you have {{upcoming_inf.length}} upcoming appointments.</p>
+   </div>
+
+   <div class="horisontal_slide_upcoming">
+      <div class="main_horisontal_upcoming">
+         <ks-swiper-container [options]="eventsSwipeOptions">
+            <ks-swiper-slide *ngFor="let upcoming of upcoming_inf">
+               <div class="upcoming upcoming_appointments">
+                  <div>
+                     <div class="header_upcomming">
+                        <h2 class="wm_subtitle_left">{{upcoming.date | date:'d MMMM'}}</h2>
+                     </div>
+                     <div class="divider_line_promo"></div>
+                     <div class="upcoming_place">
+                        <h6 class="location">{{upcoming.locationName}}</h6>
+                        <h6 class="confirmation">#{{upcoming.appointmentTypeCode}}</h6>
+                     </div>
+                  </div>
+                  <div class="main_upcoming_content_inf">
+                     <div class="content_upcoming_info">
+                        <div class="slide_content" 
+                           [ngClass]="{'big_container': upcoming.lines.length > 1}">
+                           <div class="sub_content_slide" *ngFor="let appointment of upcoming.lines">
+                              <div class="upcoming_info row">
+                                 <div class="time col-xs-2">{{getTime(appointment.customerStartTime)}}</div>
+                                 <div class="message_icon col-xs-9">
+                                    <div class="icon_message col-xs-2">
+                                       <img src="assets/images/home/upcoming.png" />
+                                    </div>
+                                    <div class="message col-xs-10 message_border">{{appointment.serviceName}}</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="sub_content_slide" 
+                              *ngIf="upcoming.lines.length > 1">
+                              <div class="upcoming_info row">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="opacity_element" *ngIf="upcoming.lines.length > 1"></div>
+                     </div>
+                  </div>
+                  <div class="upcoming-button">
+                     <button type="button" class="wm_button_white wm_height_btn"
+                             (click)="goMyAccount()">
+                        View Details
+                     </button>
+                  </div>
+               </div>
+            </ks-swiper-slide>
+            <div class="swiper-pagination"></div>
+         </ks-swiper-container>
+      </div>
+   </div>
+</div>

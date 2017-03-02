@@ -1,0 +1,40 @@
+<div class="scrollable">
+   <div class="scrollable-content" >  
+      <div id="contentScroll">
+         <div class="banner">
+            <div class="sub-banner-content">
+               <div>               
+                  <div class="content_banner_img" innerHTML={{home_page_image}}></div>
+                  <div class="gradient_overlay"></div>
+               </div>
+               <h1>{{home_page_text}}</h1>
+               <div class="content_button-banner">
+                  <button type="button" class="wm_button wm_height_btn"
+                          (click)="goServiceLocation()" >
+                     Services
+                  </button>
+               </div>
+               <a *ngIf="hasPromotions" (click)="scrollDown()" class="view_promo">
+                  {{next_message}}
+               </a>
+               <div class="content-down">
+                  <img *ngIf="hasPromotions" src="./assets/images/home/down_arrow.png" (click)="scrollDown()"/>
+               </div>
+            </div>
+         </div>
+         <div class="welcome-message" innerHTML={{welcome_message}}></div>
+      </div>
+
+      <div id="nextDiv">
+         <div *ngIf="hasUpcomingEvents && clicked" id="container_upcomming">
+            <upcoming_events></upcoming_events>
+         </div>
+         <div *ngIf="hasRecentBooking && clicked" id="container_recent">
+            <recent_booking></recent_booking>
+         </div>
+         <div *ngIf="hasPromotions && clicked" id="container_promotions">
+            <promotions_home [promotions]="promotions" ></promotions_home>
+         </div>
+      </div>
+   </div>   
+</div>

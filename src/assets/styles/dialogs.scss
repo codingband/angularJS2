@@ -1,0 +1,71 @@
+div.remove_dialog{
+   border: 1px solid var(--color-two);
+   padding-top: 5px;
+   padding-bottom: 5px;
+   background: var(--main-bg-color);
+}
+div.remove_dialog, div.error_dialog{
+   transform: translateY(0%)!important;
+}
+div.remove_panel{
+   padding: 15px;
+   padding-top: 25px;
+}
+.remove_buttons_panel{
+   padding-bottom: 15px;
+}
+.remove_buttons_panel button.wm_button_white{
+   width: 48%;
+   margin-right: 1%;
+}
+.remove_buttons_panel button.wm_button{
+   width: 48%;
+   margin-left: 1%;
+}
+.error_dialog{
+   margin-top: 10px;
+   margin-bottom: 15px;
+   border: 2px solid var(--error-border-color);
+   background: var(--error-bg-color);
+   padding: 10px;
+}
+.error_dialog .error_panel{
+   padding: 5px 10px 5px 5px;
+}
+.error_dialog p{
+   color: var(--error-border-color) !important;
+   text-align: left;
+   margin-bottom: 0;
+}
+.error_dialog .content_close{
+   padding-top: 5px;
+   padding-right: 5px;
+   position: relative;
+   left: 0;
+   top: 0;
+}
+.error_panel p{
+   margin-top: 0;
+}
+.error_status{
+   border: 1px solid var(--error-border-color) !important;
+}
+.content_form .error_status, .content_form .error_status input{
+   background: var(--error-bg-color);
+}
+.content_form input.error_status::-webkit-input-placeholder,
+.content_form div.error_status input::-webkit-input-placeholder {
+    color: var(--error-border-color);
+}
+.content_form input.error_status:-moz-placeholder,
+.content_form div.error_status input:-moz-placeholder { 
+   color: var(--error-border-color);
+}
+.content_form input.error_status::-moz-placeholder,
+.content_form div.error_status input::-moz-placeholder { 
+   color: var(--error-border-color);
+}
+.content_form input.error_status:-ms-input-placeholder,
+.content_form div.error_status input:-ms-input-placeholder {
+   color: var(--error-border-color);
+}

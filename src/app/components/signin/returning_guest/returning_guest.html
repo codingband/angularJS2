@@ -1,0 +1,52 @@
+
+<div class="container-book">
+   <div *ngIf="displayErrorMessage">
+      <error_dialog (closeErrorMsjEvent)="eventCloseMessage($event)"></error_dialog>
+   </div>
+   <!--<div *ngIf="!showEmailOnly">
+      <div class="container_facebook_btn">
+         <div class="facebook_icon">
+            <img src="assets/images/icon_facebook.png">
+         </div>
+         <button type="button" class="wm_height_btn btn-facebook">
+            Sign In with Facebook 
+         </button>
+      </div>
+      <div class="main_content_or">
+         <div class="content_or row">
+            <hr class="col-xs-6">
+            <span class="col-xs-5 text-center top_or">or</span> 
+            <hr class="col-xs-6">
+         </div> 
+      </div>
+   </div>-->
+   <div class="content_form">
+      <form #form="ngForm" novalidate>
+         <div class="padding-input">
+            <input type="text" 
+               [(ngModel)]="loginData.email" name="email"
+               class="input_email_address"
+               placeholder="EMAIL ADDRESS *" limit-to="50"
+               required #email="ngModel"
+               (keyup)="onKey($event, email)"
+               [ngClass]="{'error_status': incorrectvalue || email.dirty && email.errors?.required}">
+         </div>
+         <div class="padding-input imput-form-password" 
+            [ngClass]="{'error_status': incorrectvalue || password.dirty && password.errors?.required}">
+            <input type="{{input_password}}" 
+               [(ngModel)]="loginData.password" name="password"
+               placeholder="PASSWORD *" limit-to="50"
+               required #password="ngModel"
+               (keyup)="onKey($event, password)">
+            <img src="{{icon_password}}" (click)="showHidePassword()">
+         </div>
+         <button type="button" class="wm_button wm_height_btn_form" 
+         (click)="signIn(loginData, email, password)"> 
+            Sign In
+         </button>
+      </form>
+      <div class="forgot_password">
+         <a href="/forgot_password" (click)="forgotPassword()">Forgot Password?</a>
+      </div>
+   </div>
+</div>
